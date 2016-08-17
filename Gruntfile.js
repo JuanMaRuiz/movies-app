@@ -29,6 +29,15 @@
             'angular.js' : 'angular/angular.js',
             'angular-ui-router.js' : 'angular-ui-router/release/angular-ui-router.js'
           }
+        },
+        css: {
+          options: {
+            destPrefix: 'public/css/lib'
+          },
+          files: {
+            'bootstrap.css' : 'bootstrap/dist/css/bootstrap.css',
+            'bootstrap-theme.css' : 'bootstrap/dist/css/bootstrap-theme.css'
+          }
         }
       },
       sass: {

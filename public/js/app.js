@@ -1,7 +1,7 @@
 (function(){
   'use strict';
   angular
-    .module('bazingaApp', ['ui.router'])
+    .module('moviesApp', ['ui.router'])
     .config(configuration)
 
     configuration.$inject = ['$stateProvider', '$urlRouterProvider'];
@@ -9,17 +9,21 @@
     function configuration($stateProvider, $urlRouterProvider) {
       $stateProvider
         .state('home', {
-          url: '/',
-          templateUrl: 'partials/state1.html'
+          url: '/home',
+          templateUrl: 'partials/home.html'
         })
-        .state('state1', {
-          url: '/state1',
-          templateUrl: 'partials/state1.html'
+        .state('login', {
+          url: '/login',
+          templateUrl: 'partials/login.html'
         })
-        .state('state2', {
-          url: '/state2',
-          templateUrl: 'partials/state2.html'
+        .state('list', {
+          url: '/list',
+          templateUrl: 'partials/movie-list.html'
+        })
+        .state('profile', {
+          url: '/profile',
+          templateUrl: 'partials/profile.html'
         });
-      $urlRouterProvider.otherwise('/');
+      $urlRouterProvider.otherwise('/login');
     }
 })();
