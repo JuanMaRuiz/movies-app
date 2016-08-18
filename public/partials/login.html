@@ -8,12 +8,12 @@
             <div class="form-group">
                 <input type="password" class="form-control" ng-model="user.password" placeholder="Password">
             </div>
-            <button class="btn btn-default btn-block" ng-class="{'btn-primary': !error, 'btn-warning': error}">
+            <button class="btn btn-block btn-lg btn-info btn-round" ng-class="{'btn-primary': !error, 'btn-warning': error}">
                 <span ng-if="!error">Iniciar sesion</span>
                 <span ng-if="error">Try again</span>
             </button>
             <p class="text-center">o</p>
-            <button class="btn btn-default btn-block" ng-class="{'btn-success': !error, 'btn-warning': error}">
+            <button class="btn btn-block btn-lg btn-round btn-danger" ng-class="{'btn-success': !error, 'btn-warning': error}">
                 <span ng-if="!error">Regristro</span>
                 <span ng-if="error">Try again</span>
             </button>
