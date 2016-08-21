@@ -7,14 +7,14 @@
         "movies": "movies",
         "user": "profile"
     })
-    .factory('userInfoService', userInfo);
+    .factory('userInfoService', userInfoService);
 
-    userInfo.$inject = ['$http', 'db']
+    userInfoService.$inject = ['$http', 'db']
 
-    function userInfo($http, db) {
+    function userInfoService($http, db) {
       var userInfoFact = {}
 
-      userInfoFact.getUserName = function() {
+      userInfoFact.getUserInfo = function() {
         return $http.get(db.url + db.user);
       }
       return userInfoFact;

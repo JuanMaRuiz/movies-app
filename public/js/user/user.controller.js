@@ -8,9 +8,11 @@
 
     function userController(userInfoService) {
       var vm = this;
-      userInfoService.getUserName()
+      userInfoService.getUserInfo()
           .then(function (response) {
               vm.userName = response.data.name;
+              vm.userAvatar = response.data.avatar;
+              vm.userDescription = response.data.description;
           }, function (error) {
               vm.status = 'Unable to load customer data: ' + error.message;
           });
