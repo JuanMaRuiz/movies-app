@@ -1,7 +1,7 @@
 (function(){
   'use strict';
   angular
-    .module('moviesApp', ['ui.router'])
+    .module('moviesApp', ['ui.router', 'userModule'])
     .config(configuration)
 
     configuration.$inject = ['$stateProvider', '$urlRouterProvider'];
@@ -22,7 +22,9 @@
         })
         .state('profile', {
           url: '/profile',
-          templateUrl: 'partials/profile.html'
+          templateUrl: 'partials/profile.html',
+          controller: 'userController',
+          controllerAs: 'userCtrl'
         });
       $urlRouterProvider.otherwise('/login');
     }
