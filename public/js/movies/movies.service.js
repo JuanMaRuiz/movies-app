@@ -2,13 +2,21 @@
   'use strict';
   angular
     .module('moviesModule')
-    .factory('name', ['', function(){
-      return function name(){
+    .constant("db", {
+        "url": "http://localhost:3000/",
+        "movies": "movies"
+    })
+    .factory('moviesService', moviesService);
 
+    moviesService.$inject = ['$http', 'db']
+
+    function moviesService ($http, db) {
+      var moviesService = {};
+
+      moviesService.getMovies = function () {
+        return $http.get(db.url + db.movies);
       };
-    }])
 
-    function moviesService() {
-
+      return moviesService;
     }
 })();

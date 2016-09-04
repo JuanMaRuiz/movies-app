@@ -12,7 +12,7 @@
     userInfoService.$inject = ['$http', 'db']
 
     function userInfoService($http, db) {
-      var userInfoFact = {}
+      var userInfoFact = {}; 
 
       userInfoFact.getUserInfo = function() {
         return $http.get(db.url + db.user);
