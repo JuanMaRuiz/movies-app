@@ -27,7 +27,11 @@
     "grunt-wiredep": "^2.0.0",
     "jit-grunt": "^0.10.0",
     "jshint-stylish": "^2.1.0",
+    "phantomjs-prebuilt": "^2.1.7",
     "protractor": "^4.0.3",
     "protractor-console": "^2.0.1"
+  },
+  "scripts": {
+    "install": "node node_modules/protractor/node_modules/webdriver-manager/bin/webdriver-manager update"
   }
 }
