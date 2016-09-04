@@ -4,7 +4,7 @@
   "description": "Simple Project Template",
   "main": "index.html",
   "scripts": {
-    "test": "a"
+    "install": "node node_modules/protractor/node_modules/webdriver-manager/bin/webdriver-manager update"
   },
   "repository": {
     "type": "git",
@@ -27,9 +27,7 @@
     "grunt-wiredep": "^2.0.0",
     "jit-grunt": "^0.10.0",
     "jshint-stylish": "^2.1.0",
-    "protractor": "^4.0.3"
-  },
-  "scripts": {
-    "install": "node node_modules/protractor/node_modules/webdriver-manager/bin/webdriver-manager update"
+    "protractor": "^4.0.3",
+    "protractor-console": "^2.0.1"
   }
 }

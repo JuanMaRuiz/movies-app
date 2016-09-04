@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+ <testsuite name="Bazinga Demo App" timestamp="2016-08-25T20:22:17" hostname="localhost" time="0.707" errors="0" tests="2" skipped="0" disabled="0" failures="0">
+  <testcase classname="Bazinga Demo App" name="should have a title" time="0.6" />
+  <testcase classname="Bazinga Demo App" name="should be a login" time="0.106" />
+ </testsuite>
+</testsuites>
