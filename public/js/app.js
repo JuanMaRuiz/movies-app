@@ -2,6 +2,11 @@
   'use strict';
   angular
     .module('moviesApp', ['ui.router', 'userModule', 'moviesModule'])
+    .constant("db", {
+        "url": "http://localhost:3000/",
+        "movies": "movies",
+        "user": "profile"
+    })
     .config(configuration)
 
     configuration.$inject = ['$stateProvider', '$urlRouterProvider'];

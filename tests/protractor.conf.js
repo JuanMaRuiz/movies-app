@@ -13,7 +13,7 @@ exports.config = {
     // {
     //   'browserName': 'phantomjs',
 
-    //   /* 
+    //   /*
     //    * Can be used to specify the phantomjs binary path.
     //    * This can generally be ommitted if you installed phantomjs globally.
     //    */
@@ -28,8 +28,14 @@ exports.config = {
     ],
   suites: {
     navBar: './specs/navMenu/**/*Spec.js',
+    profile: './specs/userProfile/**/*Spec.js',
     login: './specs/login/**/*Spec.js',
     movieList: './specs/moviesList/**/*Spec.js'
-    package: 'protractor-console',
-  }]
+  },
+  // Options to be passed to Jasmine-node.
+  jasmineNodeOpts: {
+    showColors: true, // Use colors in the command line report.
+    isVerbose : true,
+    includeStackTrace : true
+  }
 }
