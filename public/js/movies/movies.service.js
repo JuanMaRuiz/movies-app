@@ -10,7 +10,12 @@
       var moviesService = {};
 
       moviesService.getMovies = function () {
-        return $http.get(db.url + db.movies);
+        return $http({
+          method: 'GET',
+          url: db.url + db.movies
+        }).then(function(response) {
+          return response.data;
+        })
       };
 
       return moviesService;

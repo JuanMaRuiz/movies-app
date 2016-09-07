@@ -3,12 +3,12 @@
     <div class="media">
       <div class="media-left">
         <a ui-sref="home">
-          <img alt="JuanMa Ruiz" class="media-object" ng-src="{{userCtrl.userAvatar}}" data-holder-rendered="true" style="width: 64px; height: 64px;">
+          <img id="image-title" class="media-object" ng-src="{{userCtrl.userAvatar}}" data-holder-rendered="true" style="width: 64px; height: 64px;" alt="{{userCtrl.userName}}">
         </a>
       </div>
       <div id="profile" class="media-body">
         <header>
-          <h4 id="user-name" class="media-heading">{{userCtrl.userName}}</h4>
+          <h4 id="user-name" data-name="{{userCtrl.userName}}" class="media-heading">{{userCtrl.userName}}</h4>
         </header>
         <p>{{userCtrl.userDescription}}</p>
       </div>

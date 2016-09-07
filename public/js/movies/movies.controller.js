@@ -8,6 +8,7 @@
 
     function moviesListController (moviesService) {
       var vm = this;
+      vm.movies = {};
       moviesService.getMovies()
         .then(function (response) {
           vm.movies = response;

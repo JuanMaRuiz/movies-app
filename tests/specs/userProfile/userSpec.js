@@ -1,14 +1,19 @@
+'use strict';
+var moviesPage = require('../../moviesPageObject.js');
+
 describe('Profile Test', function() {
-  beforeEach(function() {
-    browser.get('http://localhost:9000/#/profile');
+  var page;
+  beforeEach(function () {
+    page = new moviesPage();
+    page.getProfilePage();
   });
 
   it('should have a profile card', function() {
     var numOfItems = element.all(by.id('profile'));
+    expect(numOfItems.count()).toBe(1);
   });
 
-  it('name should be JuanMa Ruiz', function(){
-    var name = element(by.id("user-name")).evaluate('userCtrl.userName');
-    expect(name).toBe('JuanMa Ruiz');
+  it('user name should be equals to alt image', function(){
+    expect(page.getUserName("user-name")).toBe(page.getAltImage("image-title"));
   });
 });
